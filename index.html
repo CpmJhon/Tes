@@ -37,6 +37,124 @@ s0.parentNode.insertBefore(s1,s0);
 })();
 </script>
 <!--End of Tawk.to Script-->
+#canvas
+{
+    position:absolute ;    
+    margin:auto;
+    top:0;  left:0;
+    bottom:0; right:0;
+    background-color:dimgray;
+    border:4px solid white;
+    box-sizing:border-box;
+    z-index:1;
+    
+}
+
+ #container
+{   display:block;
+    position:fixed;
+    height:100vh; width:100vw;
+    background-color:#262626;
+    z-index:5;
+}
+#load
+{
+    font-size:18px;
+    color:white;
+    margin:auto; text-align:center;
+    font-family: 'Aleo', serif;   
+    user-select:none;
+    z-index:10;
+}
+
+#loader
+{
+    display:block ;
+    position:relative ;
+    height:110px; width:110px;
+    border-radius:50%;
+    margin:auto; 
+    margin-top:40%;
+    background-image:-webkit-linear-gradient(left,#14ffe9,#ffeb3b,#ff00e0);
+    animation:animate 0.5s linear infinite;
+    border:7px solid white;
+    user-select:none;
+}
+#loader:after
+{
+    content:'';
+    position:absolute;
+    margin:15px;
+    height:80px; width:80px;
+    border-radius:50%;
+    background-color:#262626;
+    opacity:0.9;
+}
+#loader > span
+{
+    display:block ;
+    position:absolute ;
+    height:100%; width:100%;
+    border-radius:50%;
+    margin:auto; 
+    background-image:-webkit-linear-gradient(left,#14ffe9,#ffeb3b,#ff00e0);
+}
+
+#loader > span:nth-child(1)
+{
+    filter:blur(5px);
+}
+#loader > span:nth-child(2)
+{
+    filter:blur(10px);
+}
+#loader > span:nth-child(3)
+{
+    filter:blur(25px);
+}
+#loader > span:nth-child(4)
+{
+    filter:blur(45px);
+} 
+
+@keyframes animate
+{
+    100%
+    {
+        transform:rotate(360deg);
+    }
+}
+
+@keyframes pop
+{
+    0%
+    { transform:scale(0.8); }
+    34%
+    { transform:scale(1); }
+    66%
+    { transform:scale(0.9); }
+    100%
+    { transform:scale(1); }
+    
+}</style></head> 
+ <body onload="document.getElementById('container').style.visibility='hidden',document.getElementsByClassName('tab')[0].style.animation='pop .27s ease'"> 
+  <canvas id="canvas"></canvas> 
+  <!-- Loader starts --> 
+  <div id="container"> 
+   <div id="loader"> 
+    <span></span> 
+    <span></span> 
+    <span></span> 
+    <span></span> 
+   </div> 
+   <br> 
+   <br> 
+   <br> 
+   <div id="load">
+     Loading... 
+   </div> 
+  </div> 
+  
   <body id="page-top" onload="getvisitor();">
     <div class="container-scroller">
       <nav class="sidebar sidebar-offcanvas" id="sidebar">
@@ -102,7 +220,6 @@ s0.parentNode.insertBefore(s1,s0);
           <div class="collapse" id="ui-downloader">
           <ul class="nav flex-column sub-menu">
          <li class="nav-item"> <a class="nav-link"href="https://play.google.com/store/apps/details?id=com.olzhas.carparking.multyplayer">Car Parking Multiplayer</a></li>
-         <li class="nav-item"> <a class="nav-link"href="game.html">Gabut game</a></li>
          </ul>
           </div>
           </li>
@@ -131,7 +248,7 @@ s0.parentNode.insertBefore(s1,s0);
           </a>
           <div class="collapse" id="ui-downloader">
           <ul class="nav flex-column sub-menu">
-         <li class="nav-item"> <a class="nav-link"href="index2.html">TESTIMONI</a></li>                      </ul>
+         <li class="nav-item"> <a class="nav-link"href="https://testimoni.fariddewangga.repl.co">TESTIMONI</a></li>                      </ul>
           </div>
           </li>        
           <li class="nav-item nav-category">
